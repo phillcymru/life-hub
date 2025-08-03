@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Life-Hub Archive</title>
+    <style>
+        :root {
+            --bg-color: #f4f7f9;
+            --sidebar-color: #fff;
+            --card-bg-color: #fff;
+            --text-color: #333;
+            --primary-color: #5d5d81;
+            --box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            --border-radius: 12px;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+        }
+        
+        .dashboard-container {
+            display: flex;
+            height: 100vh;
+        }
+
+        .sidebar {
+            width: 70px;
+            background-color: var(--sidebar-color);
+            box-shadow: var(--box-shadow);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px 0;
+            gap: 20px;
+        }
+        
+        .sidebar .logo {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(45deg, #ff8a00, #e200ff);
+            border-radius: 8px;
+        }
+
+        .sidebar .nav-icon {
+            width: 40px;
+            height: 40px;
+            background-color: #f0f0f0;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        
+        .sidebar .nav-icon:hover {
+            background-color: #e0e0e0;
+        }
+        
+        .main-content {
+            flex-grow: 1;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-bottom: 20px;
+        }
+        
+        .header h1 {
+            font-size: 24px;
+            font-weight: normal;
+            color: var(--primary-color);
+            margin: 0;
+        }
+        
+        .archive-search {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            background-color: var(--card-bg-color);
+            padding: 15px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+        }
+        
+        .archive-search label {
+            font-weight: bold;
+        }
+        
+        .archive-search select {
+            padding: 8px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+        }
+        
+        .archive-items {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .archive-item {
+            background-color: var(--card-bg-color);
+            padding: 20px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+        }
+        
+        .archive-item h3 {
+            margin: 0 0 10px 0;
+        }
+        
+        .archive-item p {
+            margin: 0;
+            color: #6c757d;
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="logo"></div>
+            <div class="nav-icon"></div>
+            <div class="nav-icon"></div>
+            <div class="nav-icon"></div>
+            <div class="nav-icon"></div>
+            <div class="nav-icon"></div>
+            <div class="nav-icon"></div>
+            <div class="nav-icon"></div>
+        </aside>
+
+        <div class="main-content">
+            <header class="header">
+                <h1 class="greeting">Archive</h1>
+            </header>
+            
+            <div class="archive-search">
+                <label for="month-select">Month:</label>
+                <select id="month-select">
+                    <option value="all">All</option>
+                    <option value="january">January</option>
+                    <option value="february">February</option>
+                    </select>
+
+                <label for="year-select">Year:</label>
+                <select id="year-select">
+                    <option value="all">All</option>
+                    <option value="2025">2025</option>
+                    <option value="2024">2024</option>
+                    </select>
+            </div>
+            
+            <div class="archive-items">
+                <div class="archive-item">
+                    <h3>Archived Item 1</h3>
+                    <p>Details about the archived item from January 2025.</p>
+                </div>
+                <div class="archive-item">
+                    <h3>Archived Item 2</h3>
+                    <p>Details about the archived item from February 2025.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+hello 
+
+</body>
+</html>

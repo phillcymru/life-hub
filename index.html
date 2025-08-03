@@ -1,0 +1,157 @@
+<style>
+        :root {
+            --bg-color: #f4f7f9;
+            --sidebar-color: #fff;
+            --card-bg-color: #fff;
+            --text-color: #333;
+            --primary-color: #5d5d81;
+            --accent-color-1: #d9534f; /* Red-orange for salary */
+            --accent-color-2: #5cb85c; /* Green for investment */
+            --accent-color-3: #5bc0de; /* Blue for fitness */
+            --accent-color-4: #f0ad4e; /* Yellow-orange for projects */
+            --box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            --border-radius: 12px;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+        }
+        
+        .dashboard-container {
+            display: flex;
+            height: 100vh;
+        }
+
+        .sidebar {
+            width: 70px;
+            background-color: var(--sidebar-color);
+            box-shadow: var(--box-shadow);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px 0;
+            gap: 20px;
+        }
+        
+        .sidebar .logo {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(45deg, #ff8a00, #e200ff);
+            border-radius: 8px;
+        }
+
+        .sidebar .nav-icon {
+            width: 40px;
+            height: 40px;
+            background-color: #f0f0f0;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        
+        .sidebar .nav-icon:hover {
+            background-color: #e0e0e0;
+        }
+        
+        .main-content {
+            flex-grow: 1;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-bottom: 20px;
+        }
+        
+        .header h1 {
+            font-size: 24px;
+            font-weight: normal;
+            color: var(--primary-color);
+            margin: 0;
+        }
+        
+        .header .search-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .header .search-container .search-input {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            width: 250px;
+        }
+        
+        .header .profile-section {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .header .profile-icon, .header .bell-icon {
+            width: 30px;
+            height: 30px;
+            background-color: #e0e0e0;
+            border-radius: 50%;
+        }
+
+        .widgets-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 20px;
+        }
+        
+        .card {
+            background-color: var(--card-bg-color);
+            border-radius: var(--border-radius);
+            padding: 25px;
+            box-shadow: var(--box-shadow);
+        }
+
+        .card .title {
+            font-size: 16px;
+            color: #6c757d;
+            margin: 0 0 10px 0;
+        }
+
+        .card .value {
+            font-size: 32px;
+            font-weight: bold;
+            margin: 0 0 5px 0;
+        }
+        
+        .card .value.text-accent-2 { color: var(--accent-color-2); }
+        .card .value.text-accent-1 { color: var(--accent-color-1); }
+        
+        .card .description {
+            font-size: 14px;
+            color: #999;
+        }
+        
+        .plus-button {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background-color: var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            color: white;
+            cursor: pointer;
+            box-shadow: var(--box-shadow);
+            z-index: 1000;
+        }
+    </style>
